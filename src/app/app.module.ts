@@ -15,7 +15,7 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   { path: 'example', component: ExampleComponent },
-  { path: 'nav', component: NavComponent },
+  { path: 'nav/:id', component: NavComponent },
   { path: 'home', component: HomeComponent}
 ]
 @NgModule({

@@ -1,4 +1,9 @@
-<div>
-    <p>example works!</p>
+<div class="container-sm">
+    <ul class="list-group heroes">
+        <li *ngFor="let hero of heroes"
+            class="list-group-item"
+        >
+           <a [routerLink]="['/nav', hero.id]">{{ hero.name }}</a>
+        </li>
+    </ul>
 </div>
-
