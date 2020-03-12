@@ -1,1 +1,15 @@
-<p>nav works!</p>
+<div>
+    <span><label for="">Id:</label>{{hero.id}}</span>
+    <br>
+    <span><label for="">Name:</label>{{hero.name}}</span>
+    
+    <div class="form-group">
+        <label for="exampleDescription">Description</label>
+        <input [formControl]= "description" class="form-control" id="exampleDescription">
+    </div>
+    <div class="form-group">
+        <label for="exampleDescription1">Description1</label>
+        <input [value]= "description.value" class="form-control" id="exampleDescription1">
+    </div>
+    <label appHighlight for="">{{description.value}}</label>
+</div>

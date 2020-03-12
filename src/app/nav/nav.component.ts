@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-nav',
@@ -20,11 +21,12 @@ export class NavComponent implements OnInit {
     { id: 20, name: 'Tornado' }
   ]
   hero;
+  description = new FormControl('');
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.hero = heroes[+params.get('productId')];
+      this.hero = this.heroes.find(hero => hero.id === +params.get('id'));
     });
   }
 

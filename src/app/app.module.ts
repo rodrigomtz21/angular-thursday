@@ -7,6 +7,9 @@ import { ExampleComponent } from './example/example.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
+import { UpercasePipe } from './upercase.pipe';
 
 const appRoutes: Routes = [
   {
@@ -23,10 +26,13 @@ const appRoutes: Routes = [
     AppComponent,
     ExampleComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective,
+    UpercasePipe
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     RouterModule.forRoot(
       appRoutes,
